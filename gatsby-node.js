@@ -110,7 +110,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	// Create redirects
 	createRedirect({
 		fromPath: `/admin`,
-		toPath: `https://businesscoach.rjmdigital.net/wp-login.php`,
+		toPath: `https://fikrah-hr.rjmdigital.net/wp-login.php`,
 		isPermanent: true,
 	});
 	createRedirect({
