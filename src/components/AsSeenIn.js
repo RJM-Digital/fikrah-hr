@@ -47,7 +47,7 @@ const LogoImage = ({ logo }) => {
 const LogoItem = ({ logoItem }) => {
 	const logoUrl = logoItem.companyUrl?.url;
 	const wrapper = (
-		<div className="as-seen-in-logo-wrapper d-flex justify-content-center align-items-center px-4">
+		<div className="as-seen-in-logo-wrapper d-flex justify-content-center align-items-center">
 			<LogoImage logo={logoItem.companyLogo} />
 		</div>
 	);
@@ -95,6 +95,7 @@ const AsSeenIn = ({
 					display: flex;
 					width: max-content;
 					align-items: center;
+					gap: 3rem;
 				}
 				.as-seen-in-marquee-inner.scroll-left {
 					animation: asisMarqueeLeft 80s linear infinite;
