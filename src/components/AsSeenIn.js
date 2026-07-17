@@ -98,10 +98,10 @@ const AsSeenIn = ({
 					gap: 3rem;
 				}
 				.as-seen-in-marquee-inner.scroll-left {
-					animation: asisMarqueeLeft 80s linear infinite;
+					animation: asisMarqueeLeft 120s linear infinite;
 				}
 				.as-seen-in-marquee-inner.scroll-right {
-					animation: asisMarqueeRight 80s linear infinite;
+					animation: asisMarqueeRight 120s linear infinite;
 				}
 				@keyframes asisMarqueeLeft {
 					0%   { transform: translateX(0); }
