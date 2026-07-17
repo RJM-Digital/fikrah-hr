@@ -79,10 +79,7 @@ const AsSeenIn = ({
 	customCss
 }) => {
 	const hasLogos = logos && logos.length > 0;
-	const splitIndex = hasLogos ? Math.ceil(logos.length / 2) : 0;
-	const row1 = hasLogos ? logos.slice(0, splitIndex) : [];
-	const row2 = hasLogos ? logos.slice(splitIndex) : [];
-	const rows = [row1, row2].filter((r) => r.length > 0);
+	const duplicated = hasLogos ? [...logos, ...logos] : [];
 
 	return (
 		<section
@@ -100,10 +97,10 @@ const AsSeenIn = ({
 					align-items: center;
 				}
 				.as-seen-in-marquee-inner.scroll-left {
-					animation: asisMarqueeLeft 40s linear infinite;
+					animation: asisMarqueeLeft 80s linear infinite;
 				}
 				.as-seen-in-marquee-inner.scroll-right {
-					animation: asisMarqueeRight 40s linear infinite;
+					animation: asisMarqueeRight 80s linear infinite;
 				}
 				@keyframes asisMarqueeLeft {
 					0%   { transform: translateX(0); }
@@ -150,20 +147,12 @@ const AsSeenIn = ({
 			</Container>
 
 			{hasLogos && (
-				<div className="as-seen-in-marquee-rows">
-					{rows.map((rowLogos, rowIndex) => {
-						const direction = rowIndex % 2 === 0 ? "scroll-left" : "scroll-right";
-						const duplicated = [...rowLogos, ...rowLogos];
-						return (
-							<div key={rowIndex} className="as-seen-in-marquee-track mb-4">
-								<div className={`as-seen-in-marquee-inner ${direction}`}>
-									{duplicated.map((logoItem, i) => (
-										<LogoItem key={i} logoItem={logoItem} />
-									))}
-								</div>
-							</div>
-						);
-					})}
+				<div className="as-seen-in-marquee-track">
+					<div className="as-seen-in-marquee-inner scroll-left">
+						{duplicated.map((logoItem, i) => (
+							<LogoItem key={i} logoItem={logoItem} />
+						))}
+					</div>
 				</div>
 			)}
 
