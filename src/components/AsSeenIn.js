@@ -27,7 +27,7 @@ const LogoImage = ({ logo }) => {
 				alt={logoAlt}
 				className="as-seen-in-logo"
 				imgStyle={{ objectFit: "contain" }}
-				style={{ maxHeight: "60px" }}
+				style={{ maxHeight: "60px", maxWidth: "160px" }}
 			/>
 		);
 	}
@@ -95,21 +95,14 @@ const AsSeenIn = ({
 					display: flex;
 					width: max-content;
 					align-items: center;
-					gap: 1rem;
+					gap: 40px;
 				}
 				.as-seen-in-marquee-inner.scroll-left {
 					animation: asisMarqueeLeft 120s linear infinite;
 				}
-				.as-seen-in-marquee-inner.scroll-right {
-					animation: asisMarqueeRight 120s linear infinite;
-				}
 				@keyframes asisMarqueeLeft {
 					0%   { transform: translateX(0); }
 					100% { transform: translateX(-50%); }
-				}
-				@keyframes asisMarqueeRight {
-					0%   { transform: translateX(-50%); }
-					100% { transform: translateX(0); }
 				}
 				.as-seen-in-marquee-track:hover .as-seen-in-marquee-inner {
 					animation-play-state: paused;
