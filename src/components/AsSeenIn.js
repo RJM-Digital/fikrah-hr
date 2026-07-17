@@ -95,7 +95,7 @@ const AsSeenIn = ({
 					display: flex;
 					width: max-content;
 					align-items: center;
-					gap: 3rem;
+					gap: 1rem;
 				}
 				.as-seen-in-marquee-inner.scroll-left {
 					animation: asisMarqueeLeft 120s linear infinite;
