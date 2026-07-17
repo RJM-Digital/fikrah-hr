@@ -47,7 +47,10 @@ const LogoImage = ({ logo }) => {
 const LogoItem = ({ logoItem }) => {
 	const logoUrl = logoItem.companyUrl?.url;
 	const wrapper = (
-		<div className="as-seen-in-logo-wrapper d-flex justify-content-center align-items-center">
+		<div
+			className="as-seen-in-logo-wrapper d-flex justify-content-center align-items-center"
+			style={{ width: "160px" }}
+		>
 			<LogoImage logo={logoItem.companyLogo} />
 		</div>
 	);
