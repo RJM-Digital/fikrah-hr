@@ -83,7 +83,9 @@ const LeadMagnetBanner1 = ({
 					<Col xs={12} lg={6} className={sectionLayout ? 'order-lg-2' : 'order-lg-1'}>
 						<div className="leadmagnet1-text-container lead-magnet-content">
 							{heading && (
-								<h3 className="leadmagnet1-heading text-center pb-3" style={{color: headingTextColour}}>{heading}</h3>
+								<h3 className="leadmagnet1-heading text-center pb-3" style={{color: headingTextColour}}>
+									<SafeHtmlParser htmlContent={heading} />
+								</h3>
 							)}
 							{description && (
 								<div className="leadmagnet1-description text-center">

@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { SafeHtmlParser } from "./SafeHtmlParser";
 
 const HighlightsSection = ({
 	backgroundColour,
@@ -104,12 +105,11 @@ const HighlightsSection = ({
 										</h3>
 									)}
 									{highlights[0].description && (
-										<p 
+										<SafeHtmlParser
 											className="highlights-item-description mb-0"
 											style={{ color: highlights[0].descriptionColour }}
-										>
-											{highlights[0].description}
-										</p>
+											htmlContent={highlights[0].description}
+										/>
 									)}
 									{highlights[0].ctaText?.title && (
 										<a href={highlights[0].ctaText.url} target={highlights[0].ctaText.target || '_self'} className="highlights-item-cta-text mt-2 d-inline-flex align-items-center text-decoration-none" style={{ color: highlights[0].ctaTextColour }}>
@@ -172,12 +172,11 @@ const HighlightsSection = ({
 											</h3>
 										)}
 										{highlight.description && (
-										<p 
+										<SafeHtmlParser
 											className="highlights-item-description mb-0"
 											style={{ color: highlight.descriptionColour }}
-										>
-											{highlight.description}
-										</p>
+											htmlContent={highlight.description}
+										/>
 										)}
 										{highlight.ctaText?.title && (
 											<a href={highlight.ctaText.url} target={highlight.ctaText.target || '_self'} className="highlights-item-cta-text mt-2 d-inline-flex align-items-center text-decoration-none" style={{ color: highlight.ctaTextColour }}>
