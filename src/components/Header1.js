@@ -41,10 +41,9 @@ const Header1 = ({
 
 	return (
 		<section
-			className={`header1-section position-relative d-flex flex-column py-lg-9 py-6 ${frameFullHeight ? 'vh-50' : ''}`}
+			className={`header1-section position-relative d-flex flex-column py-lg-9 py-6 ${frameFullHeight ? 'header1-section--full-height' : ''}`}
 			style={{
-				background: backgroundColour,
-				minHeight: frameFullHeight ? '50vh' : '35vh'
+				background: backgroundColour
 			}}
 		>
 			{backgroundImage && (() => {
@@ -134,6 +133,16 @@ const Header1 = ({
 				</Row>
 			</Container>
 			<style>{`
+				.header1-section {
+					min-height: 35vh;
+				}
+
+				@media (min-width: 1200px) {
+					.header1-section--full-height {
+						min-height: 50vh;
+					}
+				}
+
 				.header1-primary-cta-button:hover {
 					background-color: ${primaryCtaButtonHoverColour || 'var(--primary-cta-hover-colour)'} !important;
 					border-color: ${primaryCtaButtonHoverColour || 'var(--primary-cta-hover-colour)'} !important;
