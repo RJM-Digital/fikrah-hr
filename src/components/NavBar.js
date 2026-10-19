@@ -62,6 +62,8 @@ const NavBar = ({ hideLinks }) => {
 
 	const navbar = data.navbar?.navbarFields;
 
+	const displayText = (text) => typeof text === "string" ? text.replace(/&amp;/g, "&") : text;
+
 	const toggleMobileMenu = () => {
 		setShowMobileMenu(!showMobileMenu);
 	};
@@ -103,7 +105,7 @@ const NavBar = ({ hideLinks }) => {
         return (
             <NavDropdown
                 /* render the title as a node so the toggle text gets the inline style */
-                title={<span style={getTextColor()}>{link.label}</span>}
+                title={<span style={getTextColor()}>{displayText(link.label)}</span>}
                 id={`nav-dropdown-${index}`}
                 key={index}
                 className="me-4"
@@ -128,7 +130,7 @@ const NavBar = ({ hideLinks }) => {
                             style={{ color: navbar.NavDropdownLinkColour }}
                             target={target || (isInternal ? undefined : "_blank")}
                         >
-                            {title}
+                            {displayText(title)}
                         </NavDropdown.Item>
                     );
                 })}
@@ -148,7 +150,7 @@ const NavBar = ({ hideLinks }) => {
                 className="me-4"
                 style={getTextColor()}
             >
-                {link.link.title}
+                {displayText(link.link.title)}
             </Nav.Link>
         );
     }
@@ -211,7 +213,7 @@ const NavBar = ({ hideLinks }) => {
 													fontSize: '1rem',
 												}}
 											>
-												{navbar.primaryCta.title}
+												{displayText(navbar.primaryCta.title)}
 											</Button>
 										)}
 										{/* Secondary CTA */}
@@ -228,7 +230,7 @@ const NavBar = ({ hideLinks }) => {
 													borderColor: navbar.secondaryCtaColour
 												}}
 											>
-												{navbar.secondaryCta.title}
+												{displayText(navbar.secondaryCta.title)}
 											</Button>
 										)}
 									</div>
@@ -250,7 +252,7 @@ const NavBar = ({ hideLinks }) => {
 														borderColor: navbar.secondaryCtaColour												
 													}}
 												>
-													{navbar.secondaryCta.title}
+													{displayText(navbar.secondaryCta.title)}
 												</Button>
 											</div>
 										)}
@@ -272,7 +274,7 @@ const NavBar = ({ hideLinks }) => {
 												
 													}}
 													>
-													{navbar.primaryCta.title}
+													{displayText(navbar.primaryCta.title)}
 												</Button>
 											</div>
 										)}
