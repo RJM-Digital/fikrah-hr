@@ -45,7 +45,7 @@ const BlogContentSection = ({ wpPage, styling }) => {
 						
 						<div className="d-block">
 							<h6 className="blog-post-author-name pb-0 mb-0" style={{color: styling.authorNameTextColour}}>
-								{wpPage?.author?.node?.name} {wpPage?.author?.node?.lastName}
+								{wpPage?.author?.node?.name}
 							</h6>
 							<p className="blog-post-author-description" style={{color: styling.authorDescriptionTextColour}}>{wpPage?.author?.node?.description}</p>
 							
