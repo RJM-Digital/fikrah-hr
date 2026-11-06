@@ -6,7 +6,8 @@ The local [cookie banner](src/components/Cookie.js) uses `CookieConsent=true` or
 `CookieConsent=false`, retained for 365 days. Accept and Decline update Google
 Consent Mode v2 and Microsoft Clarity consent without reloading. The labelled
 Manage cookies button reopens the banner without changing the saved choice.
-The existing Fikrah cookie-policy URL is retained.
+The policy link points to Fikrah's published `/policies/cookie-policy` page
+(the previous banner linked to an ungenerated route).
 
 ### WordPress configuration
 
@@ -85,6 +86,10 @@ Use the staging deployment and Fikrah's unpublished GTM workspace in Tag Assista
   starts with the direct `noscript` fallback before Gatsby markup.
 - Check the policy link, keyboard access, mobile banner and floating controls.
   Verify GA4 Realtime/DebugView and Clarity consent state where applicable.
+
+The currently generated cookie-policy page contains placeholder copy ("Sample of
+cookie policy"). Replace it in WordPress with the approved Fikrah policy before
+release; this code change does not update WordPress content.
 
 The automated checks do not prove live request blocking or page-view counts.
 Publish the GTM workspace only after browser checks pass. Keep the prior deployment

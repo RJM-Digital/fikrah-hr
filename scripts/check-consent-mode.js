@@ -244,7 +244,7 @@ function checkBannerAndRoutes() {
 		assert.equal(consent.props.cookieName, "CookieConsent");
 		assert.equal(consent.props.expires, 365);
 		assert.equal(consent.props.visible, "byCookieValue");
-		assert.equal(React.Children.toArray(consent.props.children).find((child) => child.type === "a").props.href, "/policies/information-about-the-use-of-our-cookies");
+		assert.equal(React.Children.toArray(consent.props.children).find((child) => child.type === "a").props.href, "/policies/cookie-policy");
 
 		// Exercise the installed consent component's cookie writes and our callbacks together.
 		const originalDocument = Object.getOwnPropertyDescriptor(global, "document");

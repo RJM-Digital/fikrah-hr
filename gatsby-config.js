@@ -1,10 +1,10 @@
-const url = "https://www.example.com";
+const url = "https://www.fikrahhr.com";
 
 module.exports = {
 	siteMetadata: {
-		title: "example",
+		title: "Fikrah HR",
 		siteUrl: url,
-		company: "example",
+		company: "Fikrah HR",
 	},
 	plugins: [
 		"gatsby-plugin-sass",
