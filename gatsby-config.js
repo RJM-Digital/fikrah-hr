@@ -69,7 +69,7 @@ module.exports = {
 				background_color: `#00000`,
 				theme_color: `#00000`,
 				display: `standalone`,
-				icon: "src/images/icon3.png",
+				icon: "src/images/favicon-fikrah.svg",
 				cache_busting_mode: "none",
 			},
 		},
