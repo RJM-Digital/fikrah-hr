@@ -1,5 +1,5 @@
 import React from "react";
-import { CookieBanner } from "@connorrjm/rjm-cookie-banner";
+import CookieBanner from "./Cookie";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import Banner from "./Banner";
@@ -7,8 +7,6 @@ import WhatsAppIcon from "./WhatsAppIcon";
 import DynamicTypography from "../utls/DynamicTypography";
 import DynamicCtaStyles from "../utls/DynamicCtaStyles";
 import GlobalCustomCss from "../utls/GlobalCustomCss";
-import WpGtmHead from "../utls/WpGtmHead";
-import WpGtmBody from "../utls/WpGtmBody";
 
 const Layout = ({ children, hideNav = false, hideFooter = false }) => {
 
@@ -17,11 +15,7 @@ const Layout = ({ children, hideNav = false, hideFooter = false }) => {
 			<DynamicTypography />
 			<DynamicCtaStyles />
 			<GlobalCustomCss />
-			<WpGtmHead />
-			{/* The cookie banner remains at top if you want it. */}
-			<CookieBanner url="/policies/information-about-the-use-of-our-cookies" />
-
-			<WpGtmBody />
+			<CookieBanner />
 
 			{/* Banner */}
 			<Banner />

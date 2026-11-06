@@ -12,10 +12,10 @@
         "start": "gatsby develop",
         "build": "gatsby build",
         "serve": "gatsby serve",
-        "clean": "gatsby clean"
+        "clean": "gatsby clean",
+        "check:consent-mode": "node scripts/check-consent-mode.js"
     },
     "dependencies": {
-        "@connorrjm/rjm-cookie-banner": "^7.0.0",
         "@react-icons/all-files": "^4.1.0",
         "axios": "^0.27.2",
         "bootstrap": "^5.1.3",
